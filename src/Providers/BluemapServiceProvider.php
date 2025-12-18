@@ -21,9 +21,16 @@ class BluemapServiceProvider extends BasePluginServiceProvider
      */
     public function boot(): void
     {
-        $this->loadViews();
-        $this->loadRoutes();
-        $this->loadTranslations();
+        $this->loadViewsFrom($this->pluginPath('resources/views'), 'bluemap');
+        $this->loadRoutesFrom($this->pluginPath('routes/web.php'));
+        $this->loadRoutesFrom($this->pluginPath('routes/admin.php'));
+
+        // Compatible avec Azuriom v1.2 (Laravel 9) : charge les traductions si elles existent,
+        // sans dépendre d’un helper ajouté dans des versions ultérieures.
+        $langPath = $this->pluginPath('resources/lang');
+        if (is_dir($langPath)) {
+            $this->loadTranslationsFrom($langPath, 'bluemap');
+        }
 
         $this->bootViewData();
     }

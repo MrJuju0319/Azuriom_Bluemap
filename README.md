@@ -29,3 +29,7 @@ BLUEMAP_TITLE=BlueMap
 ## Utilisation
 
 La page publique du plugin est disponible sur `/bluemap`. Vous pouvez ajouter un lien dans votre navigation Azuriom vers cette URL ou utiliser le mode **Lien externe** pour rediriger vos joueurs vers l’interface BlueMap hébergée ailleurs.
+
+## Compatibilité
+
+Testé avec Azuriom **v1.2** (Laravel 9). Les routes et vues sont chargées via les appels Laravel natifs (`loadRoutesFrom`, `loadViewsFrom`) afin d’éviter les helpers disponibles uniquement dans les versions ultérieures d’Azuriom.
