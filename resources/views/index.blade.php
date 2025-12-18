@@ -17,9 +17,13 @@
                     <a href="{{ route('bluemap.admin.index') }}" class="alert-link">{{ __('bluemap::messages.public.configure_link') }}</a>
                 </div>
             @else
-                <p class="text-muted">
-                    {{ __('bluemap::messages.public.mode', ['mode' => $settings->integration_mode === 'sql' ? __('bluemap::messages.public.mode_sql') : __('bluemap::messages.public.mode_external')]) }}
-                </p>
+                @if ($settings->open_in_new_tab)
+                    <div class="d-flex justify-content-end mb-2">
+                        <a class="btn btn-outline-primary btn-sm" href="{{ $settings->map_url }}" target="_blank" rel="noopener">
+                            {{ __('bluemap::messages.public.open_tab') }}
+                        </a>
+                    </div>
+                @endif
 
                 <div class="border rounded overflow-hidden">
                     <iframe
@@ -31,14 +35,6 @@
                         style="height: {{ $settings->iframe_height }}px"
                     ></iframe>
                 </div>
-
-                @if ($settings->open_in_new_tab)
-                    <div class="text-end mt-3">
-                        <a class="btn btn-primary" href="{{ $settings->map_url }}" target="_blank" rel="noopener">
-                            {{ __('bluemap::messages.public.open_tab') }}
-                        </a>
-                    </div>
-                @endif
             @endif
         </div>
     </div>

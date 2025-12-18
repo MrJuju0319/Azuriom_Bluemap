@@ -28,9 +28,6 @@ return [
         'title' => 'Bluemap',
         'missing_config' => 'No Bluemap link configured yet.',
         'configure_link' => 'Configure it from the admin panel.',
-        'mode' => 'Integration mode: :mode',
-        'mode_sql' => 'SQL (link stored in the database)',
-        'mode_external' => 'External link',
         'open_tab' => 'Open Bluemap in a new tab',
     ],
 ];
