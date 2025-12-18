@@ -1,7 +1,7 @@
 {
     "id": "bluemap",
     "name": "Bluemap",
-    "description": "Plugin pour afficher la carte bluemap,
+    "description": "Plugin pour afficher la carte bluemap"
     "version": "1.0.0",
     "url": "https://azuriom.com",
     "authors": [
