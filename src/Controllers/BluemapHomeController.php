@@ -3,6 +3,7 @@
 namespace Azuriom\Plugin\Bluemap\Controllers;
 
 use Azuriom\Http\Controllers\Controller;
+use Azuriom\Plugin\Bluemap\Models\BluemapSetting;
 
 class BluemapHomeController extends Controller
 {
@@ -11,6 +12,10 @@ class BluemapHomeController extends Controller
      */
     public function index()
     {
-        return view('bluemap::index');
+        $settings = BluemapSetting::query()->latest()->first();
+
+        return view('bluemap::index', [
+            'settings' => $settings,
+        ]);
     }
 }
