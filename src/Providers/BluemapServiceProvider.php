@@ -74,7 +74,7 @@ class BluemapServiceProvider extends BasePluginServiceProvider
     protected function routeDescriptions(): array
     {
         return [
-            //
+            $this->plugin->id.'.index' => __('bluemap::messages.nav.map'),
         ];
     }
 
@@ -86,7 +86,11 @@ class BluemapServiceProvider extends BasePluginServiceProvider
     protected function adminNavigation(): array
     {
         return [
-            //
+            'bluemap' => [
+                'route' => $this->plugin->id.'.admin.index',
+                'name' => __('bluemap::messages.admin.menu'),
+                'icon' => 'bi bi-map',
+            ],
         ];
     }
 
@@ -98,7 +102,11 @@ class BluemapServiceProvider extends BasePluginServiceProvider
     protected function userNavigation(): array
     {
         return [
-            //
+            'bluemap' => [
+                'route' => $this->plugin->id.'.index',
+                'name' => __('bluemap::messages.nav.map'),
+                'icon' => 'bi bi-geo',
+            ],
         ];
     }
 }
