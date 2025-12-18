@@ -10,8 +10,8 @@
     ],
     "azuriom_api": "1.0.0",
     "providers": [
-        "\\\\Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\BluemapServiceProvider",
-        "\\\\Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\RouteServiceProvider"
+        "\\Azuriom\\Plugin\\Bluemap\\Providers\\BluemapServiceProvider",
+        "\\Azuriom\\Plugin\\Bluemap\\Providers\\RouteServiceProvider"
     ],
     "require": []
 }
