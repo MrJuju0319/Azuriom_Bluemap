@@ -1,11 +1,11 @@
 {
     "id": "bluemap",
-    "name": "bluemap",
-    "description": "Plugin for Azuriom",
+    "name": "Bluemap",
+    "description": "Plugin pour afficher la carte bluemap,
     "version": "1.0.0",
     "url": "https://azuriom.com",
     "authors": [
-        "Azuriom"
+        "MrJuJu0319"
     ],
     "azuriom_api": "1.1.0",
     "providers": [
