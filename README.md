@@ -32,4 +32,4 @@ La page publique du plugin est disponible sur `/bluemap`. Vous pouvez ajouter un
 
 ## Compatibilité
 
-Testé avec Azuriom **v1.2** (Laravel 9). Les routes sont gérées par un `RouteServiceProvider` dédié (comme le plugin officiel Wiki) et la navigation admin est déclarée pour apparaître dans le panneau d’administration.
+Testé avec Azuriom **v1.2** (Laravel 9). Les routes sont gérées par un `RouteServiceProvider` dédié (comme le plugin officiel Wiki) et la navigation admin est déclarée pour apparaître dans le panneau d’administration. Le `plugin.json` inclut `azuriom_api: 1.0.0` et des providers pleinement qualifiés pour que l’activation fonctionne correctement.

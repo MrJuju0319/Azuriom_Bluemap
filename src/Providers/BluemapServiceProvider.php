@@ -64,6 +64,7 @@ class BluemapServiceProvider extends BasePluginServiceProvider
                 'name' => 'BlueMap',
                 'icon' => 'bi bi-map',
                 'route' => 'bluemap.admin.settings',
+                'permission' => 'admin.settings',
             ],
         ];
     }

@@ -10,12 +10,5 @@
     },
     "require": {
         "php": "^8.1"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\BluemapServiceProvider"
-            ]
-        }
     }
 }

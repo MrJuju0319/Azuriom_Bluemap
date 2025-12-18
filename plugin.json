@@ -1,7 +1,7 @@
 {
     "id": "bluemap",
     "name": "BlueMap",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "plugin",
     "description": "Affiche la carte BlueMap directement depuis le site Azuriom ou via un lien externe.",
     "url": "https://github.com/example/Azuriom_Bluemap",
@@ -10,8 +10,8 @@
     ],
     "azuriom_api": "1.0.0",
     "providers": [
-        "Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\BluemapServiceProvider",
-        "Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\RouteServiceProvider"
+        "\\\\Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\BluemapServiceProvider",
+        "\\\\Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\RouteServiceProvider"
     ],
     "require": []
 }
