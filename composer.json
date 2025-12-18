@@ -1,0 +1,21 @@
+{
+    "name": "azuriom/bluemap",
+    "description": "Plugin Azuriom pour intégrer l'affichage BlueMap depuis une URL publique ou un lien externe.",
+    "type": "azuriom-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Azuriom\\\\Plugin\\\\Bluemap\\\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Azuriom\\\\Plugin\\\\Bluemap\\\\Providers\\\\BluemapServiceProvider"
+            ]
+        }
+    }
+}
