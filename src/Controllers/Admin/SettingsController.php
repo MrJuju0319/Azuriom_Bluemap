@@ -32,7 +32,7 @@ class SettingsController extends Controller
             'bluemap.title' => $validated['title'],
         ]);
 
-        return redirect()->route('admin.bluemap.settings')
+        return redirect()->route('bluemap.admin.settings')
             ->with('success', trans('messages.status.success'));
     }
 }

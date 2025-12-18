@@ -21,16 +21,10 @@ class BluemapServiceProvider extends BasePluginServiceProvider
      */
     public function boot(): void
     {
-        $this->loadViewsFrom($this->pluginPath('resources/views'), 'bluemap');
-        $this->loadRoutesFrom($this->pluginPath('routes/web.php'));
-        $this->loadRoutesFrom($this->pluginPath('routes/admin.php'));
-
-        // Compatible avec Azuriom v1.2 (Laravel 9) : charge les traductions si elles existent,
-        // sans dépendre d’un helper ajouté dans des versions ultérieures.
-        $langPath = $this->pluginPath('resources/lang');
-        if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, 'bluemap');
-        }
+        $this->loadViews();
+        $this->loadTranslations();
+        $this->registerRouteDescriptions();
+        $this->registerAdminNavigation();
 
         $this->bootViewData();
     }
@@ -44,5 +38,33 @@ class BluemapServiceProvider extends BasePluginServiceProvider
                 'bluemapTitle' => setting('bluemap.title', Config::get('bluemap.title')),
             ]);
         });
+    }
+
+    /**
+     * Routes affichables dans la barre de navigation publique.
+     *
+     * @return array<string, string>
+     */
+    protected function routeDescriptions(): array
+    {
+        return [
+            'bluemap.index' => setting('bluemap.title', 'BlueMap'),
+        ];
+    }
+
+    /**
+     * Entrées de navigation dans le panneau d’administration.
+     *
+     * @return array<string, array<string, string>>
+     */
+    protected function adminNavigation(): array
+    {
+        return [
+            'bluemap' => [
+                'name' => 'BlueMap',
+                'icon' => 'bi bi-map',
+                'route' => 'bluemap.admin.settings',
+            ],
+        ];
     }
 }
